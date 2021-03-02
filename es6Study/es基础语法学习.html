@@ -1,9 +1,72 @@
 <script>
-    //let的作用范围，要放在{}里面，如果放到外，let无法调用
+    //1、let的作用范围，要放在{}里面，如果放到外，let无法调用
     {
         var a = 10;
         let b = 20;
         console.log(a);
         console.log(b);
     }
+
+    // 2、let的定义变量特点
+    //  //var 可以声明多次
+    // //let 只能声明一次
+
+    // var m = 1;
+    // var m = 2;
+    // let n = 3;
+    // let n = 4;
+
+    //3、const声明常量
+    //定义常量,声明后不能改变，一旦声明必须初始化，否则会报错
+    const PI = "3.14";
+    console.log(PI)
+
+    //4、数组结构
+    //定义数组
+    //es6写法
+    let  [x,y,z] = [10,20,30];
+    console.log(x,y,z)
+
+    //5、对象解构
+    let user = {"name":"lucy","age":20}
+
+    //传统从对象里面取值
+    let name1 = user.age;
+    let age1 = user.age;
+    console.log(name1+"==="+age1)
+
+    //es6获取对象值
+    let {name,age} = user;
+    console.log(name+"**"+age);
+    
+    //6、模块字符串
+    //6.1、使用`实现换行
+    let str1 = `hello,
+    abc`
+    console.log(str1);
+
+    //6.2、在`符号里面使用表达式获取变量
+    let name2 = "Mike"
+    let age2 = 20;
+    let str2 = `hello,${name},ages is ${age2+1}`
+    console.log(str2)
+
+    //6.3在`符号里面调用方法
+    function f1(){
+        return "hello f1";
+    }
+    let str3 = `demo,${f1()}`
+    console.log(str3)
+
+    //7、声明对象
+    const age3 = 12;
+    const name3 = "jj1";
+    
+    //7.1传统方式定义对象
+    const p1 = {name3:name3,age3:age3};
+    console.log(p1)
+
+     //es6定义对象
+    const p2 = {name3,age3};
+    console.log(p2)
 </script>
