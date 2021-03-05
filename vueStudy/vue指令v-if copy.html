@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+      <ul>
+          <li v-for="n in 10">{{n}}</li>
+      </ul>
+      <ol>
+          <li v-for="(val,key) in 10">{{val}}----{{key}}</li>
+      </ol>
+
+      <table>
+          <tr v-for="user in userList">
+              <td>{{user.id}}</td>
+              <td>{{user.username}}</td>
+              <td>{{user.age}}</td>
+          </tr>
+      </table>
+    </div>
+
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+               userList:[
+                   {id:1,username:"1hao",age:1},
+                   {id:2,username:"2hao",age:2},
+                   {id:3,username:"3hao",age:3}
+               ]
+            },
+        })
+    </script>
+</body>
+</html>

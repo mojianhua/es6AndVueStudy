@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+       <!-- 单向绑定 -->
+       <input type="text" v-bind:value="searchMap.keyWord"/>
+       <!-- 双向绑定 -->
+       <input type="text" v-model="searchMap.keyWord"></input>
+       {{searchMap.keyWord}}
+    </div>
+
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+               searchMap:{
+                   keyWord:'阿吉是个大傻瓜'
+               }
+            }
+        })
+    </script>
+</body>
+</html>
